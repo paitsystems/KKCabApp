@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">KK Cab</string>
+    <string name="footer">© 2018 PAIT BIZ SYSTEMS Pvt.Ltd.</string>
+    <string name="footer1">© Copyright 2017 LNB Infotech Pvt.Ltd. All Rights Reserved.</string>
+
+    <string-array name="navigationName">
+        <item>Home</item>
+        <item>History</item>
+        <item>Setting</item>
+        <item>Logout</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="api_key">AIzaSyCrHNr-0MrBoR8k-97ohM88ni6qjVBjXho</string>
+    <string name="api_key1">AIzaSyC0f4rq1w-CCDihxg25TV9XkBaip2cxxIo</string>
+    <string name="api_key2">AIzaSyA6PSLIvYO-bXXYL9zsFCrLOmiKwg8bqd8</string>
+
+</resources>

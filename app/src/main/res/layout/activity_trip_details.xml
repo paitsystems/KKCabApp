@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TripDetailsActivity">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/textViewTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mobmargin5"
+        android:drawableLeft="@drawable/ic_male"
+        android:gravity="center"
+        android:padding="@dimen/mobpadding2"
+        android:text="Passanger Name" />
+
+    <TextView
+        android:id="@+id/tv_mobno"
+        style="@style/textViewTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_margin="@dimen/mobmargin5"
+        android:drawableLeft="@drawable/ic_smartphone_call"
+        android:gravity="center"
+        android:padding="@dimen/mobpadding2"
+        android:text="Mob No" />
+
+    <TextView
+        android:id="@+id/tv_emailid"
+        style="@style/textViewTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_mobno"
+        android:layout_margin="@dimen/mobmargin5"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:gravity="center"
+        android:padding="@dimen/mobpadding2"
+        android:text="EmailId" />
+
+    <TextView
+        android:id="@+id/tv_j"
+        style="@style/textViewMob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_emailid"
+        android:layout_margin="@dimen/mobmargin5"
+        android:text="Journey Date - Time" />
+
+    <LinearLayout
+        android:id="@+id/lay_j"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_j"
+        android:layout_margin="@dimen/mobmargin5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/textViewMob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_event_black_24dp"
+            android:gravity="center"
+            android:padding="@dimen/mobpadding2"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/textViewMob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_access_time_black_24dp"
+            android:gravity="center"
+            android:padding="@dimen/mobpadding2"
+            android:text="Time" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_j1"
+        style="@style/textViewMob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_j"
+        android:layout_margin="@dimen/mobmargin5"
+        android:text="Seats" />
+
+    <LinearLayout
+        android:id="@+id/lay_j2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_j1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_number_one_in_a_circle" />
+
+        <ImageView
+            android:id="@+id/img_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_number_two_in_a_circle" />
+
+        <ImageView
+            android:id="@+id/img_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_number_three_in_a_circle" />
+
+        <ImageView
+            android:id="@+id/img_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_number_four_in_circular_button" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_j1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_j2"
+        android:layout_margin="@dimen/mobmargin5"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_veh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Vehicle"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_veh"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_male" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/ed_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_j1"
+        android:layout_margin="@dimen/mobmargin5"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Special Request"
+        android:inputType="textCapSentences"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/mobmargin5"
+        android:layout_weight="0.5"
+        android:text="PAYMENT"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:backgroundTint="@color/Red" />
+
+</RelativeLayout>
