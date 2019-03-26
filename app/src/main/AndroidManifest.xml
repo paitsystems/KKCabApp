@@ -81,7 +81,7 @@
         <activity android:name=".UserDetailActivity" />
         <activity android:name=".VehicleSelectionActivity" />
         <activity android:name=".FindLocationByTextActivity" />
-        <activity android:name=".TripDetailsActivity"></activity>
+        <activity android:name=".TripDetailsActivity"/>
     </application>
 
 </manifest>

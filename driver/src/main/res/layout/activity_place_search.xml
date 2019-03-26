@@ -1,0 +1,27 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaceSearchActivity">
+
+    <fragment
+        android:id="@+id/autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment" />
+
+    <EditText
+        android:id="@+id/where"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Where to?"
+        android:focusableInTouchMode="false"
+        android:layout_margin="30dp"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:elevation="10dp"
+        android:background="@drawable/black_border_draw"
+        android:visibility="gone"/>
+</RelativeLayout>
