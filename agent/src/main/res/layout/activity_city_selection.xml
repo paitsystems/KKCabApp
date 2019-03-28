@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/mobpadding5"
-    tools:context=".CitySelectionActivity">
+    tools:context="pait.com.kkcabagent.CitySelectionActivity">
 
     <LinearLayout
         android:id="@+id/lay_auto"

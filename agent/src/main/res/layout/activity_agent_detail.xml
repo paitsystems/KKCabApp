@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/Red"
     android:padding="10dp"
-    tools:context="pait.com.kkcabagent.OTPVerificationActivity">
+    tools:context=".OTPVerificationActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
         app:srcCompat="@drawable/ic_male" />
 
     <LinearLayout
-        android:id="@+id/lay_fname"
+        android:id="@+id/lay_city"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -58,7 +58,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/ed_fName"
+            android:id="@+id/ed_city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -66,7 +66,35 @@
             android:background="@null"
             android:ems="10"
             android:gravity="center"
-            android:hint="First Name"
+            android:hint="City"
+            android:inputType="textCapSentences"
+            android:singleLine="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_agentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_city"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_border_draw"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ed_agentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Agent Name"
             android:inputType="textCapSentences"
             android:singleLine="true"
             android:textColor="@color/black"
@@ -74,17 +102,17 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/lay_lname"
+        android:id="@+id/lay_agencyName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lay_fname"
+        android:layout_below="@+id/lay_agentName"
         android:layout_marginTop="10dp"
         android:background="@drawable/white_border_draw"
         android:gravity="center"
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/ed_lName"
+            android:id="@+id/ed_agencyName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -92,7 +120,7 @@
             android:background="@null"
             android:ems="10"
             android:gravity="center"
-            android:hint="Last Name"
+            android:hint="Agency Name"
             android:inputType="textCapSentences"
             android:singleLine="true"
             android:textColor="@color/black"
@@ -103,7 +131,7 @@
         android:id="@+id/lay_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lay_lname"
+        android:layout_below="@+id/lay_agencyName"
         android:layout_marginTop="10dp"
         android:background="@drawable/white_border_draw"
         android:gravity="center"
@@ -125,14 +153,41 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_save"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/lay_mobNo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lay_email"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_border_draw"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ed_mobNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Mobile No"
+            android:inputType="number"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_mobNo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:background="@drawable/white_btn_draw"
-        android:text="SAVE"
+        android:text="REQUEST"
         android:textColor="@color/Red" />
 </RelativeLayout>

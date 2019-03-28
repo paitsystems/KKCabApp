@@ -20,7 +20,6 @@ import com.squareup.picasso.Picasso
 import android.support.design.widget.NavigationView
 import pait.com.kkcabapp.fragments.SettingFragment
 
-
 class MainActivity : AppCompatActivity() {
 
     private var navItemIndex: Int = 0

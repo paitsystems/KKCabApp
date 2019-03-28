@@ -1,8 +1,7 @@
-package pait.com.kkcabdriver;
+package pait.com.kkcabagent;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -31,12 +30,13 @@ import com.google.android.gms.tasks.Task;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-import pait.com.kkcabdriver.broadcastreceiver.MySMSBroadcastReceiver;
-import pait.com.kkcabdriver.constant.Constant;
-import pait.com.kkcabdriver.helper.AppSignatureHelper;
-import pait.com.kkcabdriver.interfaces.ServerCallback;
-import pait.com.kkcabdriver.log.WriteLog;
-import pait.com.kkcabdriver.volleyrequests.VolleyRequests;
+import pait.com.kkcabagent.R;
+import pait.com.kkcabagent.broadcastreceiver.MySMSBroadcastReceiver;
+import pait.com.kkcabagent.constant.Constant;
+import pait.com.kkcabagent.helper.AppSignatureHelper;
+import pait.com.kkcabagent.interfaces.ServerCallback;
+import pait.com.kkcabagent.log.WriteLog;
+import pait.com.kkcabagent.volleyrequests.VolleyRequests;
 
 public class OTPVerificationActivity extends AppCompatActivity implements
         MySMSBroadcastReceiver.OTPReceiveListener, View.OnClickListener {
@@ -79,6 +79,7 @@ public class OTPVerificationActivity extends AppCompatActivity implements
             Constant.showLog("yourhash-" + yourhash);
         }
 
+
     }
 
     private void init() {
@@ -103,7 +104,6 @@ public class OTPVerificationActivity extends AppCompatActivity implements
         ed4.setOnKeyListener(new PinOnKeyListener(3));
         ed5.setOnKeyListener(new PinOnKeyListener(4));
         ed6.setOnKeyListener(new PinOnKeyListener(5));
-
 
         btn_verifyotp = findViewById(R.id.btn_verifyotp);
         btn_resendotp = findViewById(R.id.btn_resendotp);

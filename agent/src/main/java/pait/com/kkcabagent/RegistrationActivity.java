@@ -1,11 +1,11 @@
-package pait.com.kkcabapp;
+package pait.com.kkcabagent;
 
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,7 +17,8 @@ import com.google.android.gms.auth.api.credentials.HintRequest;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import pait.com.kkcabapp.constant.Constant;
+import pait.com.kkcabagent.R;
+import pait.com.kkcabagent.constant.Constant;
 
 public class RegistrationActivity extends AppCompatActivity  implements
         GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
@@ -35,7 +36,7 @@ public class RegistrationActivity extends AppCompatActivity  implements
 
         ed_number = findViewById(R.id.ed_number);
         btn_otp = findViewById(R.id.btn_otp);
-        btn_otp.setOnClickListener(this::onClick);
+        btn_otp.setOnClickListener(this);
 
         apiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
@@ -75,6 +76,7 @@ public class RegistrationActivity extends AppCompatActivity  implements
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Constant.showLog(requestCode+" "+resultCode+" "+RESULT_OK);
         if (requestCode == 1) {
             if (resultCode == RESULT_OK) {
                 Credential credential = data.getParcelableExtra(Credential.EXTRA_KEY);
@@ -92,6 +94,8 @@ public class RegistrationActivity extends AppCompatActivity  implements
                 ed_number.setText(number);
                 ed_number.setSelection(ed_number.getText().length());
                 mobNumber = number;
+            } else {
+                mobNumber = ed_number.getText().toString();
             }
         }
     }
