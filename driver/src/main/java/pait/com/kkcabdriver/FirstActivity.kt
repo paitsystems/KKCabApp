@@ -12,7 +12,7 @@ class FirstActivity : AppCompatActivity() {
 
     private var permission = CheckPermission()
     companion object {
-        @JvmStatic val PREF_NAME = "shared"
+        @JvmStatic val PREF_NAME = "driver"
         @JvmStatic val rdo_Airport = "airport"
         @JvmStatic val rdo_Railway = "train_station"
         @JvmStatic val rdo_Arrival = "arrival"
@@ -63,7 +63,7 @@ class FirstActivity : AppCompatActivity() {
         if(!pref.contains("isRegistered")) {
             startActivity(Intent(this, RegistrationActivity::class.java))
         } else {
-            startActivity(Intent(this,CitySelectionActivity::class.java))
+            startActivity(Intent(this,MainActivity::class.java))
         }
         //startActivity(Intent(this,VehicleSelectionActivity::class.java))
         //startActivity(Intent(this,MainActivity::class.java))

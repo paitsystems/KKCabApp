@@ -12,7 +12,7 @@ class FirstActivity : AppCompatActivity() {
 
     private var permission = CheckPermission()
     companion object {
-        @JvmStatic val PREF_NAME = "shared"
+        @JvmStatic val PREF_NAME = "user"
         @JvmStatic val rdo_Airport = "airport"
         @JvmStatic val rdo_Railway = "train_station"
         @JvmStatic val rdo_Arrival = "arrival"

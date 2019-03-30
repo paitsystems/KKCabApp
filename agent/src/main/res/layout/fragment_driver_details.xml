@@ -9,7 +9,7 @@
     tools:context=".OTPVerificationActivity">
 
     <LinearLayout
-        android:id="@+id/lay_city"
+        android:id="@+id/lay_driverName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -20,7 +20,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/ed_city"
+            android:id="@+id/ed_driverName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -28,7 +28,7 @@
             android:background="@null"
             android:ems="10"
             android:gravity="center"
-            android:hint="Vehicle Name"
+            android:hint="Driver Name"
             android:inputType="textCapWords"
             android:singleLine="true"
             android:textColor="@color/black"
@@ -36,10 +36,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/lay_agentName"
+        android:id="@+id/lay_mobNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lay_city"
+        android:layout_below="@+id/lay_driverName"
         android:layout_marginTop="10dp"
         android:background="@drawable/white_border_draw"
         android:gravity="center"
@@ -54,8 +54,9 @@
             android:background="@null"
             android:ems="10"
             android:gravity="center"
-            android:hint="MH12AB1234"
-            android:inputType="textCapCharacters"
+            android:hint="Driver Mobile Number"
+            android:inputType="number"
+            android:maxLength="10"
             android:singleLine="true"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -65,7 +66,7 @@
         android:id="@+id/lay_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lay_agentName"
+        android:layout_below="@+id/lay_mobNo"
         android:orientation="horizontal">
 
         <TextView
@@ -74,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="RC BOOK"
+            android:text="PAN CARD"
             android:textColor="@color/white" />
 
         <TextView
@@ -83,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="INSURANCE"
+            android:text="LICENSE"
             android:textColor="@color/white" />
     </LinearLayout>
 
@@ -95,7 +96,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/lay_rcBook"
+            android:id="@+id/lay_pan"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_margin="@dimen/mobmargin2"
@@ -105,14 +106,14 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/img_rcBook"
+                android:id="@+id/img_pan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_local_see_black_24dp" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lay_insurance"
+            android:id="@+id/lay_license"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_margin="@dimen/mobmargin2"
@@ -122,7 +123,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/img_insurance"
+                android:id="@+id/img_license"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_local_see_black_24dp" />
@@ -143,7 +144,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="PERMIT"
+            android:text="PROFILE PIC"
             android:textColor="@color/white" />
 
         <TextView
@@ -152,8 +153,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="VEHICLE"
-            android:textColor="@color/white" />
+            android:text="LICENSE"
+            android:textColor="@color/white"
+            android:visibility="invisible"/>
     </LinearLayout>
 
     <LinearLayout
@@ -164,7 +166,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/lay_vehPermit"
+            android:id="@+id/lay_pic"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_margin="@dimen/mobmargin2"
@@ -174,7 +176,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/img_vehPermit"
+                android:id="@+id/img_pic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_local_see_black_24dp" />
@@ -188,7 +190,8 @@
             android:layout_weight="0.5"
             android:background="@drawable/white_border_draw"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="invisible">
 
             <ImageView
                 android:id="@+id/img_vehImg"

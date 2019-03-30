@@ -13,7 +13,7 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 import pait.com.kkcabagent.interfaces.ActivityFragmentInterface;
-import pait.com.kkcabdriver.R;
+import pait.com.kkcabagent.R;
 import pait.com.kkcabagent.model.SingleItemModel;
 import pait.com.kkcabagent.model.TripDetailClass;
 

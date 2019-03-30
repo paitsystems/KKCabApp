@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import pait.com.kkcabdriver.R;
+import pait.com.kkcabagent.R;
 
 
 public class SettingFragment extends Fragment {

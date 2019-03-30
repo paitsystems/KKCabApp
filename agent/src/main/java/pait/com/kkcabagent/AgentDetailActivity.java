@@ -3,6 +3,7 @@ package pait.com.kkcabagent;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
@@ -197,8 +198,12 @@ public class AgentDetailActivity extends AppCompatActivity implements
         user.setMobileNo(ed_mobNo.getText().toString());
         user.setImgName(imagePath);
         new Constant(getApplicationContext()).saveToPref(user);
+        SharedPreferences pref = getSharedPreferences(FirstActivity.getPREF_NAME(),MODE_PRIVATE);
+        SharedPreferences.Editor edit = pref.edit();
+        edit.putBoolean("isRegistered",true);
+        edit.apply();
         finish();
-        startActivity(new Intent(getApplicationContext(), CitySelectionActivity.class));
+        startActivity(new Intent(getApplicationContext(), FirstTimeVehicleEntryActivity.class));
         overridePendingTransition(R.anim.enter, R.anim.exit);
     }
 

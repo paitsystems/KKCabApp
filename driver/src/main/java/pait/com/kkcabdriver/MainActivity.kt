@@ -1,25 +1,24 @@
-package pait.com.kkcabagent
+package pait.com.kkcabdriver
 
-import android.content.Intent
 import android.graphics.Color
-import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.widget.Toolbar
 import android.view.View
-import android.view.WindowManager
-import android.widget.ImageView
 import android.widget.TextView
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
-import pait.com.kkcabagent.constant.Constant
-import pait.com.kkcabagent.fragments.HistoryFragment
-import pait.com.kkcabagent.fragments.HomeFragment
-import pait.com.kkcabagent.fragments.SettingFragment
+import pait.com.kkcabdriver.constant.Constant
+import pait.com.kkcabdriver.fragments.HistoryFragment
+import pait.com.kkcabdriver.fragments.HomeFragment
+import android.view.WindowManager
+import android.os.Build
+import android.widget.ImageView
+import com.squareup.picasso.Picasso
+import android.support.design.widget.NavigationView
+import pait.com.kkcabdriver.fragments.SettingFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,9 +32,6 @@ class MainActivity : AppCompatActivity() {
     private val TAG_HISTORY = "History"
     private val TAG_SETTING = "Setting"
     private val TAG_LOGOUT = "logout"
-    private var city : String? = null
-    private var from : String? = null
-    private var to : String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -102,9 +98,8 @@ class MainActivity : AppCompatActivity() {
                     CURRENT_TAG = TAG_HOME
                 }
                 R.id.history -> {
-                    /*navItemIndex = 1
-                    CURRENT_TAG = TAG_HISTORY*/
-                    startActivity(Intent(applicationContext,DriverSelectionActivity::class.java))
+                    navItemIndex = 1
+                    CURRENT_TAG = TAG_HISTORY
                 }
                 R.id.settings -> {
                     navItemIndex = 2

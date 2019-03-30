@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.media.MediaScannerConnection
-import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
@@ -17,7 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
-import kotlinx.android.synthetic.main.fragment_vehicle_detail.*
+import kotlinx.android.synthetic.main.fragment_driver_details.*
 import pait.com.kkcabagent.FirstTimeVehicleEntryActivity
 import pait.com.kkcabagent.R
 import pait.com.kkcabagent.constant.Constant
@@ -32,14 +31,14 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 private var flag : Int = 0
 
-class VehicleDetailFragment : Fragment(), View.OnClickListener {
+class DriverDetailsFragment : Fragment(), View.OnClickListener {
 
     private var param1: String? = null
     private var param2: String? = null
     private var listener: OnFragmentInteractionListener? = null
-    private lateinit var lay_rcBook : LinearLayout
-    private lateinit var lay_insurance : LinearLayout
-    private lateinit var lay_vehPermit : LinearLayout
+    private lateinit var lay_pan : LinearLayout
+    private lateinit var lay_license : LinearLayout
+    private lateinit var lay_pic : LinearLayout
     private lateinit var lay_vehImg : LinearLayout
     private lateinit var btn_save : Button
     private val GALLERY = 1
@@ -55,16 +54,17 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val view: View = inflater.inflate(R.layout.fragment_vehicle_detail, container, false)
-        lay_rcBook = view.findViewById(R.id.lay_rcBook)
-        lay_insurance = view.findViewById(R.id.lay_insurance)
-        lay_vehPermit = view.findViewById(R.id.lay_vehPermit)
+        val view: View = inflater.inflate(R.layout.fragment_driver_details, container, false)
+
+        lay_pan = view.findViewById(R.id.lay_pan)
+        lay_license = view.findViewById(R.id.lay_license)
+        lay_pic = view.findViewById(R.id.lay_pic)
         lay_vehImg = view.findViewById(R.id.lay_vehImg)
         btn_save = view.findViewById(R.id.btn_save)
 
-        lay_rcBook.setOnClickListener(this)
-        lay_insurance.setOnClickListener(this)
-        lay_vehPermit.setOnClickListener(this)
+        lay_pan.setOnClickListener(this)
+        lay_license.setOnClickListener(this)
+        lay_pic.setOnClickListener(this)
         lay_vehImg.setOnClickListener(this)
         btn_save.setOnClickListener(this)
 
@@ -79,15 +79,15 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
         intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         when(view!!.id) {
-            R.id.lay_rcBook -> {
+            R.id.lay_pan -> {
                 flag = 1
                 showPictureDialog()
             }
-            R.id.lay_insurance ->{
+            R.id.lay_license ->{
                 flag = 2
                 showPictureDialog()
             }
-            R.id.lay_vehPermit -> {
+            R.id.lay_pic -> {
                 flag = 3
                 showPictureDialog()
             }
@@ -96,7 +96,7 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
                 showPictureDialog()
             }
             R.id.btn_save -> {
-                FirstTimeVehicleEntryActivity.flag = 1
+                FirstTimeVehicleEntryActivity.flag = 0
                 listener!!.onFragmentInteraction()
             }
         }
@@ -130,32 +130,32 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
     override fun onActivityResult(requestCode:Int, resultCode:Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode == Activity.RESULT_OK)
-        if (requestCode == GALLERY) {
-            if (data != null) {
-                val contentURI = data!!.data
-                try {
-                    val bitmap = MediaStore.Images.Media.getBitmap(context!!.contentResolver, contentURI)
-                    val path = saveImage(bitmap)
-                    when (flag) {
-                        1 -> img_rcBook!!.setImageBitmap(bitmap)
-                        2 -> img_insurance!!.setImageBitmap(bitmap)
-                        3 -> img_vehPermit!!.setImageBitmap(bitmap)
-                        4 -> img_vehImg!!.setImageBitmap(bitmap)
+            if (requestCode == GALLERY) {
+                if (data != null) {
+                    val contentURI = data!!.data
+                    try {
+                        val bitmap = MediaStore.Images.Media.getBitmap(context!!.contentResolver, contentURI)
+                        val path = saveImage(bitmap)
+                        when (flag) {
+                            1 -> img_pan!!.setImageBitmap(bitmap)
+                            2 -> img_license!!.setImageBitmap(bitmap)
+                            3 -> img_pic!!.setImageBitmap(bitmap)
+                            4 -> img_vehImg!!.setImageBitmap(bitmap)
+                        }
+                    } catch (e: IOException) {
+                        e.printStackTrace()
                     }
-                } catch (e: IOException) {
-                    e.printStackTrace()
                 }
+            } else if (requestCode == CAMERA) {
+                val thumbnail = data!!.extras!!.get("data") as Bitmap
+                when (flag) {
+                    1 -> img_pan!!.setImageBitmap(thumbnail)
+                    2 -> img_license!!.setImageBitmap(thumbnail)
+                    3 -> img_pic!!.setImageBitmap(thumbnail)
+                    4 -> img_vehImg!!.setImageBitmap(thumbnail)
+                }
+                saveImage(thumbnail)
             }
-        } else if (requestCode == CAMERA) {
-            val thumbnail = data!!.extras!!.get("data") as Bitmap
-            when (flag) {
-                1 -> img_rcBook!!.setImageBitmap(thumbnail)
-                2 -> img_insurance!!.setImageBitmap(thumbnail)
-                3 -> img_vehPermit!!.setImageBitmap(thumbnail)
-                4 -> img_vehImg!!.setImageBitmap(thumbnail)
-            }
-            saveImage(thumbnail)
-        }
     }
 
     private fun saveImage(myBitmap: Bitmap):String {
@@ -172,10 +172,10 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
             val resultdate = Date(datetime)
             var imagePath = ""
             when (flag) {
-                1 -> imagePath = "RC_"
-                2 -> imagePath = "INSURANCE_"
-                3 -> imagePath = "PERMIT_"
-                4 -> imagePath = "VEHIMG_"            }
+                1 -> imagePath = "PAN_"
+                2 -> imagePath = "LICENSE_"
+                3 -> imagePath = "PIC_"
+            }
             imagePath = "$imagePath" + sdf.format(resultdate) + ".jpg"
             val f = File(wallpaperDirectory, imagePath)
             f.createNewFile()
@@ -208,7 +208,7 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-                VehicleDetailFragment().apply {
+                DriverDetailsFragment().apply {
                     arguments = Bundle().apply {
                         putString(ARG_PARAM1, param1)
                         putString(ARG_PARAM2, param2)
@@ -216,3 +216,4 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
                 }
     }
 }
+

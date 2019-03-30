@@ -65,8 +65,13 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".AgentDetailActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".FirstTimeVehicleEntryActivity"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NewAppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".FirstTimeVehicleEntryActivity" />
+        <activity android:name=".DriverSelectionActivity"></activity>
     </application>
 
 </manifest>

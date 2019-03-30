@@ -311,7 +311,7 @@ public class OTPVerificationActivity extends AppCompatActivity implements
                     edit.putBoolean("isRegistered",true);
                     edit.apply();
                     finish();
-                    //startActivity(new Intent(getApplicationContext(),UserDetailActivity.class));
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 }
             });
         }

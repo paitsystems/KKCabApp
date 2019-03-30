@@ -24,7 +24,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import pait.com.kkcabagent.FirstActivity;
-import pait.com.kkcabdriver.R;
+import pait.com.kkcabagent.R;
 import pait.com.kkcabagent.log.WriteLog;
 import pait.com.kkcabagent.model.AgentDetailClass;
 

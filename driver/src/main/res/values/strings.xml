@@ -15,5 +15,6 @@
     <string name="api_key">AIzaSyCrHNr-0MrBoR8k-97ohM88ni6qjVBjXho</string>
     <string name="api_key1">AIzaSyC0f4rq1w-CCDihxg25TV9XkBaip2cxxIo</string>
     <string name="api_key2">AIzaSyA6PSLIvYO-bXXYL9zsFCrLOmiKwg8bqd8</string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>
