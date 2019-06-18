@@ -39,7 +39,7 @@
             android:layout_weight="0.5"
             android:gravity="center"
             android:text="Vehicle"
-            android:textColor="@color/black" />
+            android:textColor="@color/Red" />
 
         <ImageView
             android:id="@+id/img_next"

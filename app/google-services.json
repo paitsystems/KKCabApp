@@ -8,6 +8,43 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:123106760736:android:9bfaeadf20fd3eba",
+        "android_client_info": {
+          "package_name": "baseproject.pait.com.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123106760736-n1qi5b5g87a95nkhj76h1794pn9d0o5c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "baseproject.pait.com.test",
+            "certificate_hash": "a0edf064ffe068d86b8ea342185871f2cd1addde"
+          }
+        },
+        {
+          "client_id": "123106760736-s4robhfbkrebbd0phsutla0k9i12c9dh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHcqTGR_EMNQaPL17emppHfYe_zxMXXHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123106760736-s4robhfbkrebbd0phsutla0k9i12c9dh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:123106760736:android:bdb16e36bf9a70d4",
         "android_client_info": {
           "package_name": "com.pait.bkg"
@@ -33,20 +70,50 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "123106760736-s4robhfbkrebbd0phsutla0k9i12c9dh.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123106760736:android:a5eceab9e4a1d986",
+        "android_client_info": {
+          "package_name": "pait.com.kkcabagent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123106760736-jtridenkdq1kusnet6bf5es6qjma8fhf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pait.com.kkcabagent",
+            "certificate_hash": "a0edf064ffe068d86b8ea342185871f2cd1addde"
+          }
         },
-        "ads_service": {
-          "status": 2
+        {
+          "client_id": "123106760736-s4robhfbkrebbd0phsutla0k9i12c9dh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHcqTGR_EMNQaPL17emppHfYe_zxMXXHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123106760736-s4robhfbkrebbd0phsutla0k9i12c9dh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     },
@@ -58,6 +125,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "123106760736-eqkq61f2dcq4qm2h1ls9douqjqonmv97.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pait.com.kkcabapp",
+            "certificate_hash": "709ad25f76319c72cc051ebea15c3d26b4c13529"
+          }
+        },
         {
           "client_id": "123106760736-5t99n7s5f8d2n7qlsfuou1abla1r1g5i.apps.googleusercontent.com",
           "client_type": 1,
@@ -77,20 +152,50 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "123106760736-s4robhfbkrebbd0phsutla0k9i12c9dh.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123106760736:android:453f69ba5ada722d",
+        "android_client_info": {
+          "package_name": "pait.com.kkcabdriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123106760736-4eohdov36nt0s1ktcsbv70sc9pfbrsq7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pait.com.kkcabdriver",
+            "certificate_hash": "a0edf064ffe068d86b8ea342185871f2cd1addde"
+          }
         },
-        "ads_service": {
-          "status": 2
+        {
+          "client_id": "123106760736-s4robhfbkrebbd0phsutla0k9i12c9dh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHcqTGR_EMNQaPL17emppHfYe_zxMXXHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123106760736-s4robhfbkrebbd0phsutla0k9i12c9dh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

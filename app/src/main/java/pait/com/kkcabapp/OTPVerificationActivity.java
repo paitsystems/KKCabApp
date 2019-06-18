@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -260,7 +261,7 @@ public class OTPVerificationActivity extends AppCompatActivity implements
         }
     }
 
-    private void verifyOTP() {
+    private void verifyOTP1() {
         if (ed1.getText().toString().length() == 1 && ed2.getText().toString().length() == 1 &&
                 ed3.getText().toString().length() == 1 && ed4.getText().toString().length() == 1 &&
                 ed5.getText().toString().length() == 1 && ed6.getText().toString().length() == 1) {
@@ -269,6 +270,32 @@ public class OTPVerificationActivity extends AppCompatActivity implements
                     ed5.getText().toString() + ed6.getText().toString();
             Constant.showLog("OTP VERIFIED");
             showDia(1);
+        }
+    }
+
+    private void verifyOTP() {
+        if (ed1.getText().toString().length() == 1 && ed2.getText().toString().length() == 1 &&
+                ed3.getText().toString().length() == 1 && ed4.getText().toString().length() == 1 &&
+                ed5.getText().toString().length() == 1 && ed6.getText().toString().length() == 1) {
+            String otp = ed1.getText().toString() + ed2.getText().toString() +
+                    ed3.getText().toString() + ed4.getText().toString() +
+                    ed5.getText().toString() + ed6.getText().toString();
+            Constant.showLog(otp);
+            Log.d("Log", "response_value:" + response_value);
+            writeLog("response_value:" + response_value);
+            if (otp.equals(response_value)) {
+                Constant.showLog("response_value:" + response_value);
+                writeLog("OTP_Matched");
+                showDia(1);
+            } else {
+                writeLog("Invalid_OTP");
+                /*toast.setText(R.string.invalid_otp);
+                toast.show();*/
+            }
+        } else {
+            writeLog("Enter_OTP");
+            /*toast.setText(R.string.pleaseenterotp);
+            toast.show();*/
         }
     }
 

@@ -12,8 +12,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="api_key">AIzaSyCrHNr-0MrBoR8k-97ohM88ni6qjVBjXho</string>
-    <string name="api_key1">AIzaSyC0f4rq1w-CCDihxg25TV9XkBaip2cxxIo</string>
-    <string name="api_key2">AIzaSyA6PSLIvYO-bXXYL9zsFCrLOmiKwg8bqd8</string>
+    <string name="api_key">AIzaSyCDCnSLgVTErRy_Z2srAqNmfQEYGT-Wx6g</string>
+    <string name="api_key1">AIzaSyCDCnSLgVTErRy_Z2srAqNmfQEYGT-Wx6g</string>
+    <string name="api_key2">AIzaSyCDCnSLgVTErRy_Z2srAqNmfQEYGT-Wx6g</string>
 
 </resources>
